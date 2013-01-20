@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Liftr by theblacksmith</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/theblacksmith/liftr">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/theblacksmith/liftr/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/theblacksmith/liftr/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Liftr</h1>
+          <p>Helps you lift a new web application front-end by managing components dependencies and required scripts from sass.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/theblacksmith">theblacksmith</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h3>Litr</h3>
+
+<p>Documentation still comming...</p>
+
+<h2>How to install</h2>
+
+<pre><code>$ gem install liftr
+</code></pre>
+
+<h2>Available components</h2>
+
+<p>Check the <a href="/components">Liftr's Registry</a> for ready to use</p>
+
+<p><strong>OR...</strong></p>
+
+<h2>Download and configure any repository</h2>
+
+<ol>
+<li>
+<p>Install the repository as a component</p>
+
+<pre><code>$ liftr install someguy/awesome-component
+</code></pre>
+</li>
+<li>
+<p>Add a _lift.scss file to the <code>components/awesome-component</code> folder to tell Liftr which files it should lift. It should look like this:</p>
+
+<div class="highlight"><pre><span class="c1">// Requires another liftr component</span>
+<span class="k">@import</span> <span class="s">"liftr/jquery";</span>
+
+<span class="c1">// Requires this component sass/css file</span>
+<span class="k">@import</span> <span class="s">"css/awesome-component";</span>
+
+<span class="c1">// Tells Liftr to include this javascript to lift this component</span>
+<span class="c1">// Note that you don't have '.js' or '.min.js' extension. Liftr will choose appropriately.</span>
+<span class="k">@include</span><span class="nd"> load-js</span><span class="p">(</span><span class="s2">"awesome-component"</span><span class="o">,</span> <span class="s2">"js/awesome-component"</span><span class="p">)</span><span class="err">;</span>
+
+<span class="c1">// once the everything is defined, let Liftr know it is all done</span>
+<span class="k">@include</span><span class="nd"> lifted</span><span class="p">(</span><span class="s2">"bootstrap"</span><span class="p">)</span><span class="err">;</span>
+</pre></div>
+</li>
+<li>
+<p>That's it! Have fun!</p>
+
+<p>Now you can simply add <code>@import 'lift/awesome-component'</code> in your sass application and Liftr will do the heavy lifting for you.</p>
+</li>
+</ol>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-37446627-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
